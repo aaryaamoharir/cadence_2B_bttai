@@ -1,0 +1,78 @@
+{
+  "hidden_problems": {
+    "quality": 469,
+    "sound": 352,
+    "reviews": 351,
+    "headphones": 335,
+    "cables": 283,
+    "batteries": 255,
+    "part": 254,
+    "videos": 250,
+    "battery": 238,
+    "screen": 237
+  },
+  "redeeming_qualities": {
+    "sound": 841,
+    "quality": 711,
+    "these headphones": 654,
+    "headphones": 471,
+    "Sound quality": 451,
+    "reviews": 437,
+    "Sound": 392,
+    "good quality": 376,
+    "camera": 319,
+    "videos": 314
+  },
+  "controversial_aspects": {
+    "4 cameras": {
+      "disagreement_rate": 0.6015625,
+      "total_mentions": 128,
+      "disagreement_count": 77
+    },
+    "Mbps": {
+      "disagreement_rate": 0.5630252100840336,
+      "total_mentions": 119,
+      "disagreement_count": 67
+    },
+    "Logitech products": {
+      "disagreement_rate": 0.5423728813559322,
+      "total_mentions": 118,
+      "disagreement_count": 64
+    },
+    "better cameras": {
+      "disagreement_rate": 0.5422535211267606,
+      "total_mentions": 142,
+      "disagreement_count": 77
+    },
+    "motherboards": {
+      "disagreement_rate": 0.5363636363636364,
+      "total_mentions": 110,
+      "disagreement_count": 59
+    },
+    "latency": {
+      "disagreement_rate": 0.5263157894736842,
+      "total_mentions": 114,
+      "disagreement_count": 60
+    },
+    "SSDs": {
+      "disagreement_rate": 0.4818181818181818,
+      "total_mentions": 110,
+      "disagreement_count": 53
+    },
+    "much better quality": {
+      "disagreement_rate": 0.4778761061946903,
+      "total_mentions": 226,
+      "disagreement_count": 108
+    },
+    "YouTube videos": {
+      "disagreement_rate": 0.4732510288065844,
+      "total_mentions": 243,
+      "disagreement_count": 115
+    },
+    "Wireless": {
+      "disagreement_rate": 0.46464646464646464,
+      "total_mentions": 198,
+      "disagreement_count": 92
+    }
+  }
+}
