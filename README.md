@@ -18,32 +18,40 @@
 
 ## 🎯 **Project Highlights**
 
-- Developed a machine learning model using natural language processing and sentiment analysis to address needs of product designers to identify which project features their users like, and which ones they do not.
-- Achieved `[key metric or result]`, demonstrating `[value or impact]` for `[host company]`.
-- Generated actionable insights to inform business decisions at Cadence.
-- Implemented the ABSA Model(Aspect-based Sentiment Analysis Model) to address industry constraints or expectations.
-
+- Developed a machine learning pipeline using natural language processing, feature extraction, and aspect-based sentiment analysis (ABSA) to help Cadence product designers identify which software features users like or dislike based off of the Amazon 2023 reviews dataset. 
+- Conducted baseline experiments using BERT and feature extraction models, identifying early accuracy plateaus (55–63%) and designing strategies to improve training efficiency.
+- Performed extensive exploratory data analysis (EDA), uncovering noise, inconsistent formatting, and ambiguous feature mentions in product reviews—informing preprocessing and modeling decisions. For example, discovering class imbalance between different ratings. 
+- Generated actionable insights to inform business decisions at Cadence using a Streamlit dashboard.
+- Implemented the ABSA Model(Aspect-based Sentiment Analysis Model) to address industry needs around fine-grained user sentiment insights.
+- 
 ---
 
 ## 👩🏽‍💻 **Setup and Installation**
 
-**Provide step-by-step instructions so someone else can run your code and reproduce your results. Depending on your setup, include:**
-
-* How to clone the repository
-* How to install dependencies
-* How to set up the environment
-* How to access the dataset(s)
-* How to run the notebook or scripts
-
+* How to clone the repository: git clone "" 
+* How to install dependencies: pip install -r requirements.txt
+* How to set up the environment:
+    1. python3 -m venv venv
+    2. source env/bin/activate
+* How to access the dataset(s): navigate to this page https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023 
+* How to run the notebook or scripts:
+     1. To run the streamlit dashboard: streamlit run dashboard.py
+     2. To run the python models: python [nameOfFile.y]
 ---
 
 ## 🏗️ **Project Overview**
 
 **Describe:**
 
-- How this project is connected to the Break Through Tech AI Program
-- Your AI Studio host company and the project objective and scope
-- The real-world significance of the problem and the potential impact of your work
+This project was completed as part of the Break Through Tech AI Studio, where teams work with industry partners to deliver machine learning solutions to real-world problems.
+
+Our host company, Cadence, asked us to analyze product reviews to better understand:
+
+1. Which software features users discuss most
+2. Sentiment associated with each feature
+3. Areas of improvement and opportunities for customer satisfaction
+
+The goal of the project is to design an aspect-based sentiment analysis model capable of extracting fine-grained insights that traditional sentiment analysis cannot provide. This work has real-world significance for user experience design, product engineering prioritization, and customer-driven innovation.
 
 ---
 
@@ -97,14 +105,6 @@
 
 ---
 
-## 📝 **License**
-
-If applicable, indicate how your project can be used by others by specifying and linking to an open source license type (e.g., MIT, Apache 2.0). Make sure your Challenge Advisor approves of the selected license type.
-
-**Example:**
-This project is licensed under the MIT License.
-
----
 
 ## 📄 **References** (Optional but encouraged)
 
@@ -112,7 +112,7 @@ Cite relevant papers, articles, or resources that supported your project.
 
 ---
 
-## 🙏 **Acknowledgements** (Optional but encouraged)
+## 🙏 **Acknowledgements** 
 
-Thank your Challenge Advisor, host company representatives, TA, and others who supported your project.
+Thank your Dr. Farhan Raseed, Matt Brems, and the Break Through Tech team for helping us throughout this process and giving us the opporutnity to build this product.
 
