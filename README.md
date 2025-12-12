@@ -8,7 +8,7 @@
 
 | Name             | GitHub Handle | Contribution                                                             |
 |------------------|--------------- |--------------------------------------------------------------------------|
-| Aaryaa Moharir   | @aaryaamoharir | Data exploration, visualization, overall project coordination            |
+| Aaryaa Moharir   | @aaryaamoharir | Data exploration, feature extraction, ABSA model integration, dashboard  |
 | Hannah Rauch     | @jramirez     | Data collection, exploratory data analysis (EDA), dataset documentation  |
 | Darlyn Gomez     | @aminahassan  | Data preprocessing, feature engineering, data validation                 |
 | Jianhua Deng     | @pmehta       | Model selection, hyperparameter tuning, model training and optimization  |
