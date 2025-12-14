@@ -1,155 +1,173 @@
-
-# Breakthrough Tech AI Studio Project Fall 2025 - Cadence2B 
-
-
+# Breakthrough Tech AI Studio Project Fall 2025 | Cadence2B
 
 ### 👥 **Team Members**
 
-
-| Name             | GitHub Handle | Contribution                                                             |
-|------------------|--------------- |--------------------------------------------------------------------------|
-| Aaryaa Moharir   | @aaryaamoharir | Data exploration, feature extraction, ABSA model integration, dashboard  |
-| Hannah Rauch     | @hannahrauch     | Data collection, data cleaning, exploratory data analysis (EDA), preliminary sentiment analysis, keyword and product feature extraction, data visualization, model integration  |
-| Darlyn Gomez     | @aminahassan  | Data preprocessing, feature engineering, data validation                 |
-| Jianhua Deng     | @Jianhua-Deng      | Model selection, hyperparameter tuning, model training and optimization  |
+| Name           | GitHub Handle  | Contribution                                                                                                                                                                                             |
+| -------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Aaryaa Moharir | @aaryaamoharir | Data exploration, feature extraction, ABSA model integration, dashboard                                                                                                                                  |
+| Hannah Rauch   | @hannahrauch   | Data collection, data cleaning, exploratory data analysis (EDA), preliminary sentiment analysis, keyword and product feature extraction, data visualization, model integration                           |
+| Darlyn Gomez   | @DarlynGomez   | Exploratory data analysis (EDA), machine learning architecture & modeling, hyperparameter tuning, ABSA pipeline development, generative AI experimentation, production optimization, and model selection |
+| Jianhua Deng   | @Jianhua-Deng  | Model selection, hyperparameter tuning, model training and optimization                                                                                                                                  |
 
 ---
 
-## 🎯 **Project Highlights**
+## ★ **Project Highlights**
 
-- Developed a machine learning pipeline using natural language processing, feature extraction, and aspect-based sentiment analysis (ABSA) to help Cadence product designers identify which software features users like or dislike based off of the Amazon 2023 reviews dataset. 
-- Conducted baseline experiments using BERT and feature extraction models, identifying early accuracy plateaus (55–63%) and designing strategies to improve training efficiency.
-- Performed extensive exploratory data analysis (EDA), uncovering noise, inconsistent formatting, and ambiguous feature mentions in product reviews—informing preprocessing and modeling decisions. For example, discovering class imbalance between different ratings. 
-- Generated actionable insights to inform business decisions at Cadence using a Streamlit dashboard.
-- Implemented the ABSA Model(Aspect-based Sentiment Analysis Model) to address industry needs around fine-grained user sentiment insights.
-  
+- Developed a **machine learning pipeline** using natural language processing, feature extraction, and aspect-based sentiment analysis (ABSA) to help Cadence product designers identify which software features users like or dislike based off of the Amazon 2023 reviews dataset.
+- Performed extensive **exploratory data analysis (EDA)**, uncovering noise, inconsistent formatting, and ambiguous feature mentions in product reviews informing preprocessing and modeling decisions. For example, discovering class imbalance between different ratings.
+- Built **interactive Streamlit dashboard** with filtering across 1M+ reviews
+- Conducted **baseline experiments** using BERT and feature extraction models, identifying early accuracy plateaus (55-63%) and pivoted to integrated ABSA approach
+- Experimented with **generative AI models** (Google Gemini, DeepSeek) achieving 200K review processing in 25 minutes with AI-generated actionable insights
+- Implemented the **ABSA Model**(Aspect-based Sentiment Analysis Model) to address industry needs around fine-grained user sentiment insights.
+- Optimized **processing pipeline** from 3-day runtime to hours through model architecture redesign
+
 ---
 
-## 👩🏽‍💻 **Setup and Installation**
+## ➤ **Setup and Installation**
 
-* How to clone the repository: git clone "" 
-* How to install dependencies: pip install -r requirements.txt
-* How to set up the environment:
-    1. python3 -m venv venv
-    2. source env/bin/activate
-* How to access the dataset(s): navigate to this page https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023 
-* How to run the notebook or scripts:
-     1. To run the streamlit dashboard: streamlit run dashboard.py
-     2. To run the python models: python [nameOfFile.y]
+- How to clone the repository: `git clone "https://github.com/aaryaamoharir/cadence_2B_bttai.git"`
+- How to install dependencies: `pip install -r requirements.txt`
+- How to set up the environment:
+  1. `python3 -m venv venv`
+  2. `source venv/bin/activate`
+- How to access the dataset(s): Navigate to https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023
+- How to run the project:
+  1.  To run the Streamlit dashboard: `streamlit run dashboard.py`
+  2.  To run the Python models: `python [nameOfFile.py]`
+  3.  To view ABSA results: Open `aspect_sentiments.csv` or explore via dashboard
+
 ---
 
-## 🏗️ **Project Overview**
+## ⟡ **Project Overview**
 
-This project was completed as part of the Break Through Tech AI Studio, where teams work with industry partners to deliver machine learning solutions to real-world problems.
+This project was completed as part of the **Break Through Tech AI Studio**, where teams collaborate with industry partners to deliver machine learning solutions for real-world problems.
 
-Our host company, Cadence Design Systems, asked us to analyze product reviews to better understand:
+Our host company, **Cadence Design Systems**, tasked us with analyzing product reviews to understand:
 
 1. Which software features users discuss most
-2. Sentiment associated with each feature
-3. Areas of improvement and opportunities for customer satisfaction
+2. The sentiment associated with each feature
+3. Areas for improvement and opportunities to enhance customer satisfaction
 
-The goal of the project is to design an aspect-based sentiment analysis model capable of extracting fine-grained insights that traditional sentiment analysis cannot provide. This work has real-world significance for user experience design, product engineering prioritization, and customer-driven innovation.
+The project goal was to design an **aspect-based sentiment analysis (ABSA) model** capable of extracting fine-grained insights that traditional sentiment analysis cannot capture. This work has practical implications for **user experience design**, **product engineering prioritization**, and **customer-driven innovation**.
 
----
+### **Our Solution**
 
-## 📊 **Data Exploration**
+We developed an **ABSA system** that:
 
-We used the Amazon Reviews 2023 dataset, consisting of approximately 43 million customer reviews containing review text, star ratings, timestamps, and product metadata. To make the project computationally feasible and domain-relevant, the dataset was filtered to the Electronics category, resulting in approximately 1 million reviews. The data was stored and processed in parquet format for efficient access and scalability
+- Extracts specific product aspects such as battery, screen, and camera
+- Assigns independent sentiment scores for each aspect
+- Provides actionable insights, for example:
 
+  - **Camera quality:** 4.8 / 5 sentiment
+  - **Battery life:** 2.1 / 5 sentiment
 
-*Data Exploration & Preprocessing:*
-
-We performed extensive preprocessing to prepare the dataset for modeling:
-    -Removed HTML tags, duplicate entries, and extremely short or low-quality (“garbage”) reviews
-    -Cleaned text by removing filler words, conjunctions, and stopwords
-    -Identified and addressed significant class imbalance, as the majority of reviews were overwhelmingly positive
-    -Applied random sampling to reduce dataset size and accelerate experimentation without losing representativeness
-
-*Exploratory Data Analysis (EDA) Insights*
-
-Key insights from EDA included:
-    -Strong positive bias in review sentiment across most products
-    -Clear differences in review volume and sentiment patterns by product type
-    -Frequent mentions of specific product features such as battery life, usability, camera quality, and screen
-    -Evidence that star ratings alone fail to capture feature-level dissatisfaction (e.g., high rating but negative battery comments)
-
-*Challenges:*
-
-Severe sentiment class imbalance
-Long model runtimes when processing large-scale text data
-Noisy feature extraction when relying solely on rule-based NLP approaches (e.g., spaCy noun extraction)
-
-*Assumptions:*
-
-Reviews accurately reflect user sentiment toward specific product features
-Sampling preserved overall sentiment and feature distributions
-Pretrained language models generalize well to Amazon review data
+This approach goes beyond generic sentiment summaries, offering detailed, feature-level intelligence that supports informed product decisions.
 
 ---
 
-## 🧠 **Model Development**
+## ⟡ **Data Exploration**
 
-We initially explored separate sentiment classification and feature extraction pipelines, but later pivoted to an Aspect-Based Sentiment Analysis (ABSA) approach that combines both tasks.
+We used the Amazon Reviews 2023 dataset, which contains approximately 43 million customer reviews including review text, star ratings, timestamps, and product metadata. For computational feasibility and domain relevance, the dataset was filtered to the Electronics category, resulting in around 1 million reviews. Data was stored and processed in **parquet format** for efficient access and scalability.
 
-*Final model:*
+### **Data Exploration & Preprocessing**
 
-    -Pretrained DeBERTa / BERT-based transformer model
-    -Loaded from Hugging Face
-    -Fine-tuned for sentiment classification at the feature (aspect) level
+- Removed HTML tags, duplicate entries, and extremely short or low-quality reviews
+- Cleaned text by removing filler words, conjunctions, and stopwords
+- Addressed significant class imbalance, as most reviews were overwhelmingly positive
+- Applied stratified random sampling to reduce dataset size while maintaining representativeness
 
-*Feature Selection & Tuning:*
+### **Exploratory Data Analysis (EDA) Insights**
 
-    -Feature (aspect) extraction using spaCy-based parsing
-    -Input pairs constructed as (review text, extracted feature)
-    -Tokenization via AutoTokenizer
-    -Sentiment classification using AutoModelForSequenceClassification
-    -Leveraged transfer learning to avoid training from scratch and significantly reduce compute time
+- Review sentiment shows strong positive bias across most products
+- Differences in review volume and sentiment patterns are apparent by product type
+- Frequent mentions of key product features: battery life, usability, camera quality, and screen
+- Star ratings alone do not capture feature-level dissatisfaction (for example, 5-star ratings may include negative battery comments)
+- Over 1,000 rating-sentiment disagreements detected where numerical ratings contradict text sentiment
 
+### **Challenges**
 
----
+- Severe class imbalance in sentiment distribution
+- Long runtimes when processing large-scale text data (initial approach took 3 days)
+- Noisy feature extraction from rule-based NLP methods (e.g., spaCy extracting generic terms like "weeks," "works," "things")
+- Mixed-sentiment reviews with positive and negative comments about different features
 
-## 📈 **Results & Key Findings**
+### **Assumptions**
 
-*Performance Metrics:*
-
-    -Sentiment classification accuracy: ~88%
-    -Processing time reduced from days to hours using pretrained transformer models 
-
-*Model Performance & Insights:*
-
-    -Successfully extracted feature-level sentiment, solving the “mixed-review” problem
-    -Enabled outputs such as:
-        Camera sentiment: 4.8 / 5
-        Battery sentiment: 2.1 / 5
-    -Demonstrated that high star ratings can mask dissatisfaction with specific product features
-    
-*Limitations:*
-
-    -The dataset’s positivity bias may skew sentiment predictions
-    -Certain extracted “features” were noisy or irrelevant (e.g., “works,” “weeks”)
-    -Feature extraction accuracy was limited when relying only on spaCy without domain-specific constraints
+- Reviews accurately reflect user sentiment toward specific product features
+- Stratified sampling preserved overall sentiment and feature distributions
+- Pretrained language models generalize effectively to Amazon review data
 
 ---
 
-## 🚀 **Next Steps**
+## ⟡ **Model Development**
 
-*Current Limitations:*
+We initially explored separate sentiment classification and feature extraction pipelines using **BERT** and **spaCy**, but later adopted an **Aspect-Based Sentiment Analysis (ABSA)** approach that integrates sentiment classification and feature extraction into a single model.
 
-    -Feature extraction quality still produces some irrelevant aspects
-    -Class imbalance limits robustness for negative sentiment detection
-    -Sampling trades completeness for speed
+### **Final Model**
 
-*Future Improvements:*
+- **Model:** `yangheng/deberta-v3-base-absa-v1.1` from Hugging Face
+- **Architecture:** Pre-trained DeBERTa v3 transformer fine-tuned for aspect-level sentiment
+- **Key Innovation:** Identifies product aspects and assigns independent sentiment to each aspect in a single pass
+- **Accuracy:** Maintains 88% sentiment classification
+- **Processing Time:** Reduced from 3 days to hours
+- **Advantage:** Effectively handles mixed-sentiment reviews, e.g., "great camera but terrible battery" is correctly classified as **camera = positive**, **battery = negative**
 
-    -Improve feature extraction using domain-aware or supervised aspect models
-    -Perform deeper hyperparameter tuning
-    -Add sentiment calibration across product categories
-    -Incorporate multilingual reviews
-    -Scale inference using distributed processing
+### **Feature Selection & Tuning**
+
+- Leveraged **transfer learning** to avoid training from scratch, reducing compute requirements
+- Used a pre-trained checkpoint fine-tuned on millions of product reviews
+- Constructed **review-aspect pairs** to enable contextualized sentiment analysis
+- Applied **batch processing optimization** to ensure scalability
 
 ---
 
-## 🙏 **Acknowledgements** 
+## ★ **Results & Key Findings**
 
-Thank you Dr. Farhan Raseed, Matt Brems, and the entire Break Through Tech team for helping us throughout this process and giving us the opporutnity to build this project!
+### **Performance Metrics**
 
+- **Sentiment classification accuracy:** ~88%
+- **Processing time:** Reduced from days to hours through the use of pretrained transformer models
+
+### **Model Performance & Insights**
+
+- Successfully extracted **feature level sentiment**, addressing the mixed review problem
+- Enabled granular outputs such as:
+
+  - **Camera sentiment:** 4.8 / 5
+  - **Battery sentiment:** 2.1 / 5
+
+- Demonstrated that high overall star ratings can mask dissatisfaction with specific product features
+
+---
+
+## ⟡ **Next Steps**
+
+### **Current Limitations**
+
+- Dataset positivity bias may skew sentiment predictions toward positive classes
+- Feature extraction using spaCy alone produced noisy or generic features, such as "works" and "weeks"
+- Class imbalance reduced robustness when detecting infrequent negative sentiment cases
+- Generative AI integration is not yet production ready due to API cost and reliability constraints
+
+### **Future Improvements**
+
+- Enhance feature extraction through domain specific aspect vocabularies
+- Introduce confidence thresholding to filter low quality predictions
+- Incorporate temporal analysis to track sentiment changes over time, such as post product updates
+- Deploy generative AI components for scalable natural language insights
+- Implement a real time processing API for live review analysis
+- Expand support for multilingual reviews in global markets
+- Develop comparative sentiment analysis across competing products
+
+---
+
+## ~ **Acknowledgements** ~
+
+Thank you Dr. Farhan Raseed, Matt Brems, and the entire Break Through Tech team for helping us throughout this process and giving us the opportunity to build this project!
+
+Special thanks to:
+
+- **Matt Brems** for technical guidance on model selection, debugging, and production best practices
+- **Farhan Raseed** for keeping us focused on real-world business impact and providing significant educationr resources
+- **Hugging Face community** for pre-trained models that accelerated development
+- **Cadence Design Systems** for presenting a challenging real-world problem
