@@ -25,6 +25,23 @@
 
 ## ➤ **Setup and Installation**
 
+### ⓘ Large Data Files
+
+Due to GitHub's file size limits, the following file is not included in the repository:
+
+- **aspect_sentiments.csv** (ABSA predictions, ~217 MB)
+  - Contains 1M+ aspect-level sentiment predictions
+  - Required to run the dashboard
+  - [Download from Google Drive](https://drive.google.com/file/d/1eET8j8Bt96xqe0NWZuqS43FL_HAW_Mkl/view?usp=sharing)
+  - Place in `data/` directory after cloning
+
+### To run the dashboard:
+
+1. Clone this repository
+2. Download aspect_sentiments.csv from the link above
+3. Place it in the `data/` directory
+4. Run `streamlit run dashboard/ultimate_dashboard.py`
+
 - How to clone the repository: `git clone "https://github.com/aaryaamoharir/cadence_2B_bttai.git"`
 - How to install dependencies: `pip install -r requirements.txt`
 - How to set up the environment:
@@ -158,6 +175,39 @@ We initially explored separate sentiment classification and feature extraction p
 - Implement a real time processing API for live review analysis
 - Expand support for multilingual reviews in global markets
 - Develop comparative sentiment analysis across competing products
+
+---
+
+## 📁 Repository Structure
+
+```
+cadence_2B_bttai/
+├── dashboard/
+│   └── dashboard.py          # Streamlit dashboard
+│
+├── notebooks/
+│   ├── 00_Generate_Disagreements.ipynb    # Disagreement detection analysis
+│   ├── 01_Data_Overview.ipynb             # Exploratory data analysis
+│   ├── 02_Aspect_Analysis.ipynb           # Aspect extraction and analysis
+│   ├── 03_Disagreement_Analysis.ipynb     # Rating-sentiment mismatch investigation
+│   └── convert_reviews_to_parquet.ipynb   # Data preprocessing and format conversion
+│
+├── data/
+│   ├── aspect_sentiments.csv          # ABSA model output
+│   ├── aspect_summary.csv             # Aggregated statistics by aspect
+│   ├── disagreements.csv              # Rating-sentiment mismatches
+│   ├── disagreement_insights.json     # Disagreement pattern metadata
+│   ├── ai_batch_categorized.csv       # Gemini batch processing results
+│   └── sample_reviews.csv             # Sample dataset for testing
+│
+├── models/
+│   └── absa.py                        # ABSA model implementation
+│
+├── Cadence 2B Project Presentation.pdf    # Final presentation slides
+├── requirements.txt                   # Python dependencies
+├── README.md                          # Project documentation
+└── .gitignore                         # Git ignore configuration
+```
 
 ---
 
